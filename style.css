@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+DE+VA+Guides&family=Playwrite+TZ+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+TZ+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lobster&family=Oswald:wght@200..700&family=Playwrite+DE+VA+Guides&family=Playwrite+TZ+Guides&display=swap');
+
+
+
+
+
+body {
+    background: url("82cf.jpg") center;    
+    background-attachment: fixed;
+    background-size: cover;
+  
+}
+header {
+    margin-top: -10px;
+    height: 100vh;
+    background: url("top.jpg") center;    
+    background-attachment: fixed;
+    background-size: cover;   
+    
+}
+.image {
+    width: 250px;
+}
+
+.im1 {
+    width: 250px;
+}
+.image3 {
+    width: 250px;
+}
+.blockflex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.blockflex2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.text1 {
+    font-family: Montserrat, sans-serif;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px rgb(235, 41, 147);
+    text-align: center; 
+    font-size: 25pt;
+}
+.maimblock {
+    width: 1024px;
+    margin: 0 auto;   
+
+}
+.rth {
+    display:flex;
+}
+.rth1 {
+    border: 10px groove pink;
+    text-align: center;
+}
+.text2 {
+    text-align: justify;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    text-shadow: 1px 1px 2px rgb(235, 41, 147);
+}
+.text3{
+    font-family: "Lobster", serif;
+    font-style: normal;
+    font-size: 18pt;
+    text-shadow: 8px 8px 8px palevioletred;
+    text-shadow: 1px 1px 2px rgb(235, 41, 147);
+}
+.text4 {
+    font-size: 14pt;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.2;
+    text-shadow: 0px 1px 5px rgb(249, 249, 249), 0px -1px 5px rgb(249, 249, 249);
+}   
+li {
+    margin-bottom: 8px;
+}
+.text5{
+    font-size: 18pt;
+    text-shadow: 1px 1px 2px rgb(235, 41, 147);
+}
+.text6 {
+    font-size: 13pt;
+    text-align: justify;
+    line-height: 1.2;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+}   
+.text7{
+    font-size: 18pt;
+    text-shadow: 1px 1px 2px rgb(235, 41, 147);
+}
+.text8 {
+    font-size: 13pt;
+    text-align: justify;
+    line-height: 1.2;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+}   
+.image7{
+    position: absolute;       
+    height: 180px;
+    /* animation: anim 2s linear infinite; */
+}
+.image8 {
+    height: 200px;
+    animation: anim 3s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+span {
+    color: blueviolet;
+    
+}
+.pas {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.podp {
+    font-family: "Playwrite DE VA Guides", cursive;
+}
+.txhead {
+    padding-top: 80vh;
+    text-align: center;
+    font-family: "Playwrite DE VA Guides", cursive;
+    font-size: 30pt;
+    font-weight: 800;
+    text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue; /* изначальная тень */
+    animation: coloranim 5s ease-in-out infinite;
+}
+
+@keyframes coloranim {
+    0% {
+        text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue;
+    
+    }
+    25% {
+        text-shadow: 0 0 5px rgb(128, 128, 255), 0 0 10px rgb(128, 128, 255), 0 0 15px rgb(128, 128, 255);        
+    }
+    50% {
+        text-shadow: 0 0 5px rgb(255, 153, 0), 0 0 10px rgb(255, 153, 0), 0 0 15px rgb(255, 153, 0);
+        color: rgba(255, 255, 255, 0.8);
+    }
+    75% {
+        text-shadow: 0 0 5px rgb(255, 0, 102), 0 0 10px rgb(255, 0, 102), 0 0 15px rgb(255, 0, 102);
+    }
+    100% {
+        text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue;
+    }
+}
+
+
+
