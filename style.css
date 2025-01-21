@@ -8,20 +8,19 @@
 
 
 
-
+@media (max-width: 1920px) {
 body {
     background: url("82cf.jpg") center;    
     background-attachment: fixed;
     background-size: cover;
-  
+    margin: 0;
 }
 header {
     margin-top: -10px;
     height: 100vh;
     background: url("top.jpg") center;    
     background-attachment: fixed;
-    background-size: cover;   
-    
+    background-size: cover;       
 }
 .image {
     width: 250px;
@@ -43,7 +42,6 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .text1 {
     font-family: Montserrat, sans-serif;
     font-style: oblique;
@@ -112,9 +110,8 @@ li {
 }
 .image8 {
     height: 200px;
-    animation: anim 3s linear infinite;
+    animation: anim 5s linear infinite;
 }
-
 @keyframes anim {
     0% {
         transform: rotate(0deg);
@@ -149,7 +146,6 @@ span {
     text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue; /* изначальная тень */
     animation: coloranim 5s ease-in-out infinite;
 }
-
 @keyframes coloranim {
     0% {
         text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue;
@@ -168,7 +164,58 @@ span {
     100% {
         text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue;
     }
+    }
 }
 
+@media (max-width: 1050px) {
+    header {
+        margin-top: -10px;
+        width: 100vw;
+        height: 100%;
+        background: url("top2.jpg") center;    
+        background-attachment: fixed;
+        background-size: cover;       
+    }
+    .maimblock {
+        width: 700px;
+        margin: 0 auto;   
+    
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        margin-top: 0px;
+        width: 100vw;
+        height: 100%;
+        background: url("top2.jpg") center;    
+        background-attachment: fixed;
+        background-size: cover;       
+    }
+    .maimblock {
+        width: 700px;
+        margin: 0 auto;   
+    
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        margin-top: 0px;
+        width: 100vw;
+        height: 100%;
+        background: url("top3.jpg") center;    
+        background-attachment: fixed;
+        background-size: cover;       
+    }
+    .maimblock {
+        width: 400px;
+        margin: 0 auto;       
+    }
+    .rth {
+        display:flex;
+        flex-direction: column;
+    }
+}
 
 
