@@ -200,7 +200,7 @@ span {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     header {
         margin-top: 0px;
         width: 100vw;
@@ -211,6 +211,25 @@ span {
     }
     .maimblock {
         width: 400px;
+        margin: 0 auto;       
+    }
+    .rth {
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        margin-top: 0px;
+        width: 100vw;
+        height: 100%;
+        background: url("top4.jpg") center;    
+        background-attachment: fixed;
+        background-size: cover;       
+    }
+    .maimblock {
+        width: 80%;
         margin: 0 auto;       
     }
     .rth {
