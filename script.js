@@ -1,9 +1,14 @@
+document.addEventListener('DOMContentLoaded', () => {
 const block = document.getElementById('im8');
 let x = 0;
 let y = 0;
 let dx = 2;
 let dy = 2;
 let angle = 0; // Угол поворота
+const text = "СПАСИБО  ЗА   ПРОСМОТР!";
+const footer = document.getElementById("footerText");
+let index = 0;
+const bodies = document.getElementById("bodies");
 
 function moveBlock() {
   const screenWidth = window.innerWidth -100;
@@ -47,3 +52,48 @@ block.style.top = '0px';
 
 // Запуск анимации
 moveBlock();
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Показываем кнопку при прокрутке вниз
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 1500) { // Если прокручено более 200px
+        scrollToTopBtn.style.display = 'block';
+        scrollToTopBtn.classList.remove('hidden');
+    } else {
+        scrollToTopBtn.classList.add('hidden');
+        setTimeout(() => scrollToTopBtn.style.display = 'none', 300); // Задержка для плавного скрытия
+    }
+});
+
+// Обработчик клика по кнопке
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Плавная прокрутка
+    });
+});
+
+
+function typeWriter() {
+  if (index < text.length) {
+      footer.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 50);
+  }
+}
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 3200) {
+      footer.style.opacity = 1;
+      bodies.style.backdropFilter = "blur(50px)";
+      if (index === 0) {
+          typeWriter();
+      }
+  } else {
+    bodies.style.backdropFilter = "blur(5px)";
+  }
+});
+
+
+});
