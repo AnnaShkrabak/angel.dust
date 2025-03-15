@@ -14,7 +14,8 @@ body {
     background: url("82.jpg") center;    
     background-attachment: fixed;
     background-size: cover;  
-    backdrop-filter: blur(5px);  
+    backdrop-filter: blur(5px); 
+    transition: backdrop-filter 1s ease-in-out; 
 }
 header {
     margin-top: -10px;
@@ -27,9 +28,22 @@ header {
     width: 250px;
 }
 
-.im1 {
-    width: 250px;
+.image-container {
+    display: inline-block;
+    position: relative;
 }
+
+.image-container img {
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container:hover img {
+    transform: scale(2);
+    z-index: 2; /* Поднимает картинку выше других элементов */
+}
+
 .image3 {
     width: 250px;
 }
@@ -67,19 +81,34 @@ header {
     height: 350px;
     bottom: 20px;    
     font-size: 58px;
-    font-weight: bold;
-    opacity: 1;
-    transition: opacity 0.5s;
+    font-weight: bold;    
     text-align: center;
     color: #ff4500;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    
-    transition: opacity 0.5s;
     background-image: url("klev.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
-  
+    opacity: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Делаем контейнер относительным для позиционирования персонажа */
+}
+
+.character {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: url("character.png") no-repeat center/cover;
+    left: -80px;    
+    transform: translateY(-50%);
+    transition: transform 0.15s linear;
 }
 .cursor {
     display: inline-block;

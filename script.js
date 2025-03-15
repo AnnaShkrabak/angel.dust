@@ -7,8 +7,30 @@ let dy = 2;
 let angle = 0; // Угол поворота
 const text = "СПАСИБО  ЗА   ПРОСМОТР!";
 const footer = document.getElementById("footerText");
+const foot = document.getElementById("foot");
+const textContainer = document.getElementById("text");
+const character = document.getElementById("character");
 let index = 0;
+let isTyping = false; 
 const bodies = document.getElementById("bodies");
+
+function typeWriter() {
+  if (index < text.length) {
+      textContainer.innerHTML += text.charAt(index);
+      
+      // Двигаем персонажа вперёд
+      const textWidth = textContainer.offsetWidth;
+      character.style.transform = `translate(${textWidth + 100}px)`; // +20px вперёд
+
+      index++;
+      setTimeout(typeWriter, 150);
+  } else {
+      setTimeout(() => {
+          character.style.transform = "translate(-20%, 0)"; // Возвращаем в начало
+          isTyping = false; // Разрешаем повторную анимацию
+      }, 500);
+  }
+}
 
 function moveBlock() {
   const screenWidth = window.innerWidth -100;
@@ -75,23 +97,20 @@ scrollToTopBtn.addEventListener('click', () => {
 });
 
 
-function typeWriter() {
-  if (index < text.length) {
-      footer.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeWriter, 50);
-  }
-}
-
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 3200) {
-      footer.style.opacity = 1;
+  if (window.scrollY > 3300) {
+      foot.style.opacity = 1;
       bodies.style.backdropFilter = "blur(50px)";
-      if (index === 0) {
-          typeWriter();
-      }
+      if (!isTyping) { 
+        isTyping = true;
+        index = 0; // Сбрасываем индекс
+        textContainer.innerHTML = ""; // Очищаем текст
+        typeWriter();
+    }
   } else {
+    textContainer.innerHTML = ""; // Очищаем текст
     bodies.style.backdropFilter = "blur(5px)";
+    foot.style.opacity = 0;
   }
 });
 
