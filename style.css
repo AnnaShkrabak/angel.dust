@@ -68,6 +68,10 @@ header {
     width: 1024px;
     margin: 0 auto;   
 }
+#text {
+    text-align: center;
+    font-size: calc(16px + 0.5vw); /* немного адаптивный размер */
+  }
 .bloclbg {
     background-color: #f7f2ea;
     width: 100%;
@@ -98,17 +102,19 @@ header {
 .text-container {
     display: flex;
     align-items: center;
+    margin-top: -150px;
     position: relative; /* Делаем контейнер относительным для позиционирования персонажа */
 }
 
 .character {
     width: 100px;
-    height: 100px;
+    height: 150px;
     position: absolute;
-    background: url("character.png") no-repeat center/cover;
-    left: -80px;    
-    transform: translateY(-50%);
-    transition: transform 0.15s linear;
+    background: center/cover no-repeat;
+    background-size: contain;
+    margin-right: 20px;
+    margin-top: -100px;
+    transition: left 0.15s linear, transform 0.15s linear;
 }
 .cursor {
     display: inline-block;
@@ -255,7 +261,7 @@ span {
         background-attachment: fixed;
         background-size: cover;       
     }
-    .maimblock {
+    .mainblock {
         width: 700px;
         margin: 0 auto;   
     
@@ -271,11 +277,16 @@ span {
         background-attachment: fixed;
         background-size: cover;       
     }
-    .maimblock {
+    .mainblock {
         width: 700px;
         margin: 0 auto;   
     
     }
+    #text {
+        white-space: normal;      /* разрешить перенос */
+        word-break: break-word;   /* разрешить перенос слов при необходимости */
+        max-width: 90vw;          /* ограничение ширины */
+      }
 }
 
 
@@ -288,7 +299,7 @@ span {
         background-attachment: fixed;
         background-size: cover;       
     }
-    .maimblock {
+    .mainblock {
         width: 400px;
         margin: 0 auto;       
     }
@@ -320,7 +331,7 @@ span {
         background-attachment: fixed;
         background-size: cover;       
     }
-    .maimblock {
+    .mainblock {
         width: 80%;
         margin: 0 auto;       
     }
