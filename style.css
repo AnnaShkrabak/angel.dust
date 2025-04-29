@@ -70,7 +70,7 @@ header {
 }
 #text {
     text-align: center;
-    font-size: calc(16px + 0.5vw); /* немного адаптивный размер */
+    font-size: 40pt;
   }
 .bloclbg {
     background-color: #f7f2ea;
@@ -286,6 +286,8 @@ span {
         white-space: normal;      /* разрешить перенос */
         word-break: break-word;   /* разрешить перенос слов при необходимости */
         max-width: 90vw;          /* ограничение ширины */
+        font-size: 30pt;
+ 
       }
 }
 
@@ -320,6 +322,9 @@ span {
         outline: none; 
         cursor: pointer; 
     }
+    #text {
+        font-size: 20pt; 
+      }
 }
 
 @media (max-width: 500px) {
@@ -352,6 +357,9 @@ span {
         outline: none; 
         cursor: pointer; 
     }
+    #text {
+        font-size: 14pt; 
+      }
 }
 
 
